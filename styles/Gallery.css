@@ -1,0 +1,42 @@
+
+        .HeroImage {
+            background-image: url("../assets/images/Gallery.jpg");
+        }
+
+        #image-menu {
+            margin-top: 10px;
+            float:none;
+        }
+        div.gallery {
+            margin: 5px;
+            border:1px solid #ccc;
+            float:left;
+            width:250px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background-color:white;
+            font-size:15px;
+            
+        }
+        p.gallery {
+            text-align:left;
+            word-wrap: break-word;
+            padding-left:5px;
+            padding-right:5px;
+            margin:2px;
+        }
+
+        div.imageDesc {
+            margin-left:2px;
+        }
+        #generalGallery,#communityGallery,#tripGallery {
+            margin:8px -16px;
+        }
+        .gallery {
+            float:left;
+            width:25%;
+        }
+        .gallery img {
+            width:250px;
+            height:200px;
+        }
+

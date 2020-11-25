@@ -1,0 +1,82 @@
+body {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        overflow: scroll;
+    }
+}
+
+.masonryholder {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.header-image.sm {
+    height:22.5vh;
+}
+
+.header-image.lg {
+    height:35vh;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header-image.sm {
+        height:30vh;
+    }
+
+    .header-image.lg {
+        height:30vh;
+    }
+
+    .masonryholder {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 764px) {
+
+    .masonryholder {
+        column-count: 1;
+    }
+
+    .header-image.sm {
+        height:30vh;
+    }
+
+    .header-image.lg {
+        height:30vh;
+    }
+}
+
+.masonryblocks {
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.item-info {
+    background-color: white;
+    overflow:hidden;
+    padding: 5%;
+}
+
+.item-info i {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.location {
+    color: black;
+    font-weight: 500;
+    margin-left:10px;
+    font-family: Quicksand;
+}
+
+.purple-button {
+    float: right;
+}

@@ -1,0 +1,343 @@
+/* Adam  */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* Main user interface styling to be used on all pages */
+
+/* vars */
+
+:root {
+    --main-bg-color: #F7F7FC;
+    --secondary-bg-color: #FFFFFF;
+    --third-bg-color: #D1C5F7;
+    --sidebar-width: 17.5%;
+    --nav-height: 6%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+#actionsContainer {
+    display: flex;
+    height: 100%;
+}
+
+#sidebar {
+    width: var(--sidebar-width);
+    height: 100%;
+
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-image: url('../assets//images/background.jpg');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    text-align: center;
+}
+
+#sidebar h4{
+    font-size: 60px;
+}
+
+#navRight a {
+    box-sizing: initial;
+}
+
+#page nav {
+    height: var(--nav-height);
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+}
+
+#page nav #navRight {
+    display: flex;
+    margin-left: auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+#page nav a {
+    text-decoration: none;
+    color:black;
+    margin: 0 1%;
+}
+
+#page nav a:first-child {
+    margin: 0 2%;
+}
+
+#page nav a.active {
+    font-weight: bold;
+}
+
+#page nav a:hover {
+    opacity: 0.5;
+}
+
+#page nav #navRight a {
+    padding: 0 10px;
+}
+
+#page {
+    width: 100%;
+}
+
+#page nav footer{
+    width: 100%;
+}
+
+#page section#content {
+    /* height: calc(100% - var(--nav-height)); */
+    animation: fadeIn ease 2s;
+    padding: 1%;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+}
+
+.spaced {
+    padding: 1.5% 2%;
+}
+
+#navRight a:first-child {
+    width: 70px;
+}
+
+div.mobile#mHeader {
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url('../assets//images/background.jpg');
+
+    height: 10%;
+    width: calc(100%);
+
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    font-size:20px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.mobile#mHeader h1 {
+    margin-left: 3%;
+}
+
+div.mobile#mHeader button {
+    margin-right: 3%;
+
+    color:white;
+    font-size: 25px; 
+}
+
+div.mobile#mHeader button:active {
+    opacity: 0.5;
+}
+
+input[type=submit] {
+    background:purple;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background:#6e006e;
+}
+
+@media only screen and (max-width: 1024px) {
+    #sidebar {
+        display: none;
+    }
+
+    #page nav {
+        flex-direction: column;
+        height: auto;
+        
+        width: 100%;
+        align-items: baseline;
+
+        border-bottom: 2px solid black;
+        animation: fadeIn ease 1s;
+        
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #page nav a {
+        padding: 0 2%;
+        margin: 1% 2%;
+        font-size: 14px;
+    }
+
+    #page nav a:first-child {
+        margin: 2%;
+        margin-top: 4%;
+    }
+
+    nav #navRight {
+        padding-bottom: 5% !important;
+    }
+
+    #page section#content {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+
+/* Reusable Elements */
+
+    /* Remove all styling from a button by adding class="button-blank" */
+
+        button.button-blank {
+            background: transparent;
+            box-shadow: 0px 0px 0px transparent;
+            border: 0px solid transparent;
+            text-shadow: 0px 0px 0px transparent;
+        }
+
+        button.button-blank:hover {
+            background: transparent;
+            box-shadow: 0px 0px 0px transparent;
+            border: 0px solid transparent;
+            text-shadow: 0px 0px 0px transparent;
+        }
+
+        button.button-blank:active {
+            outline: none;
+            border: none;
+        }
+
+        button.button-blank:focus {
+            outline: 0;
+        }
+    
+    /* Element States */
+
+        .state.hide {
+            display:none !important;
+        }
+
+        .state.show {
+            display: initial;
+        }
+
+    /* Animations */
+
+        @keyframes fadeIn {
+            0% {
+                opacity:0;
+            }
+            100% {
+                opacity:1;
+            }
+        }
+
+        .fadeIn.one{
+            animation: fadeIn ease 1s;
+        }
+
+        .fadeIn.two{
+            animation: fadeIn ease 2s;
+        }
+
+        .fadeIn.four{
+            animation: fadeIn ease 4s;
+        }
+
+        .fadeIn.six{
+            animation: fadeIn ease 6s;
+        }
+
+        /* Button */
+        
+        .purple-button {
+            border: solid #5F2EEA 2px;
+            border-radius: 15px;
+            color:  #5F2EEA;
+            padding: 0 15px;
+            opacity: 0.6;
+            text-decoration: none;
+            outline:none;
+            cursor: pointer;
+        }
+
+        .purple-button:focus {
+            outline:none;
+        }
+
+        .purple-button:hover {
+            opacity: 0.85;
+            color:  #5F2EEA;
+            text-decoration: none;
+        }
+
+    /* Banner */
+
+    .HeroImage {
+        background-image: linear-gradient(rgba(0.5, 0.5, 0.5, 0.2), rgba(0.5, 0.2, 0.2, 0.2)), url("../assets/images/sunset.jpg");
+        height: 170px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .HeroText {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    
+    input[type=text], select, textarea
+    {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        resize: vertical;
+    }

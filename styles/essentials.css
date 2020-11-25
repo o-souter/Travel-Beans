@@ -1,0 +1,12 @@
+#essentials {
+    color: black;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    margin: 15px auto;
+    width: 70%;
+    overflow-y:scroll;
+    height:460px;
+    display:block;
+}

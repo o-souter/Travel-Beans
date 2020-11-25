@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- Aida -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentials - Travel Beans</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/TB_UI.css">
+    <script src="https://kit.fontawesome.com/5ff8596a54.js" crossorigin="anonymous"></script>
+    <script src="scripts/mobile.js" defer></script>
+
+    <link rel="stylesheet" href="styles/Essentials.css">
+
+</head>
+<body>
+    <div id="actionsContainer">
+        <div id="sidebar">
+            <h4>Travel Beans</h4>
+        </div>
+        <div id="page">
+            <div class="mobile" id="mHeader">
+                <h1>Travel Beans</h1>
+                <button class="button-blank" onclick="ToggleNav();">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="state hide">
+                <a href="index.html">Home</a>
+                <a href="Discover.html">Discover</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Community.html">Community</a>
+                <a href="Essentials.html" class="active">Essentials</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Calendar.html">Events</a>
+                <div id="navRight">
+                    <a href="JoinPage.html">Join Us</a>
+                    <a href="https://www.instagram.com/robertgordonuni/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/robertgordonuniversity"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </nav>
+            <section id="content" >
+                <!-- Page Contet Below Please, Love from Adam xx -->
+                <div class="HeroImage">
+                    <div class="HeroText">
+                        <h1>Travel Essentials</h1>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-top:5%;">
+                    <h2>Some basics you will need</h2><br>
+                    <p>Select a season and a list of items suitable for that weather will appear!</p><br>
+                                                        
+                    <button class="purple-button" id= "spring" onclick="switchSeason1()">Spring</button>
+                    <button class="purple-button" id= "summer" onclick="switchSeason2()">Summer</button>
+                    <button class="purple-button" id= "autumn" onclick="switchSeason3()">Autumn</button>
+                    <button class="purple-button" id= "winter" onclick="switchSeason4()">Winter</button> 
+                    
+                    
+                    <div id="season1">
+                            <table id= "essentials">
+
+                                <tr>
+                                <th><img src= "assets/images/shirt.png"></th>
+                                <td>Shirt</td>
+                                </tr>
+                        
+                                <tr>
+                                <th><img src= "assets/images/shoes.png"></th>
+                                <td>Shoes</td>
+                                </tr>
+                        
+                                <tr>
+                                <th><img src= "assets/images/jeans.png"></th>
+                                <td>Jeans</td>
+                                </tr>
+                        
+                                <tr>
+                                <th><img src= "assets/images/binoculars.png"></th>
+                                <td>Binoculars</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/sandals.png"></th>
+                                    <td>Sandals</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/passport.png"></th>
+                                    <td>Passport</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/socks.png"></th>
+                                    <td>Socks</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/suitcase.png"></th>
+                                    <td>Suitcase</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/toothbrush.png"></th>
+                                    <td>Toothbrush</td>
+                                </tr>
+                        
+                            </table>
+                    </div>
+
+                    <div id="season2">
+                            <table id= "essentials">
+    
+                                <tr>
+                                  <th><img src= "assets/images/snorkel.png"></th>
+                                  <td>Snorkel gear</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/hat.png"></th>
+                                  <td>Hat</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/flipflops.png"></th>
+                                  <td>Flipflops</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/shorts.png"></th>
+                                  <td>Shorts</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/backpack.png"></th>
+                                    <td>Backpack</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th><img src= "assets/images/fan.png"></th>
+                                    <td>Hand fan</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/sneakers.png"></th>
+                                    <td>Sneakers</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/sunglasses.png"></th>
+                                    <td>SUnglasses</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/swim.png"></th>
+                                    <td>Swimming gear</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/passport.png"></th>
+                                    <td>Passport</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/socks.png"></th>
+                                    <td>Socks</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/suitcase.png"></th>
+                                    <td>Suitcase</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/toothbrush.png"></th>
+                                    <td>Toothbrush</td>
+                                </tr>
+                            
+                            </table>
+                    </div>
+
+                    <div id="season3">
+                            <table id= "essentials">
+    
+                                <tr>
+                                  <th><img src= "assets/images/boots.png"></th>
+                                  <td>Boots</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/skates.png"></th>
+                                  <td>Ice skates</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/umbrella.png"></th>
+                                  <td>Umbrella</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/jacket.png"></th>
+                                  <td>Jacket</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/jeans.png"></th>
+                                    <td>Jeans</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/raincoat.png"></th>
+                                    <td>Raincoat</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/passport.png"></th>
+                                    <td>Passport</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/socks.png"></th>
+                                    <td>Socks</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/suitcase.png"></th>
+                                    <td>Suitcase</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/toothbrush.png"></th>
+                                    <td>Toothbrush</td>
+                                </tr>
+                        
+                            </table>
+                    </div>
+
+                    <div id="season4">
+                            <table id= "essentials">
+    
+                                <tr>
+                                  <th><img src= "assets/images/ski.png"></th>
+                                  <td>Skiing </td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/scarf.png"></th>
+                                  <td>Scarf</td>
+                                </tr>
+                          
+                                <tr>
+                                  <th><img src= "assets/images/gloves.png"></th>
+                                  <td>Gloves</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/sweater.png"></th>
+                                    <td>Sweater</td>
+                                </tr>
+                          
+                                <tr>
+                                    <th><img src= "assets/images/passport.png"></th>
+                                    <td>Passport</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/socks.png"></th>
+                                    <td>Socks</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/suitcase.png"></th>
+                                    <td>Suitcase</td>
+                                </tr>
+
+                                <tr>
+                                    <th><img src= "assets/images/toothbrush.png"></th>
+                                    <td>Toothbrush</td>
+                                </tr>
+                        
+                            </table>
+                    </div>
+
+                    <script>
+                            document.getElementById("season1").style.display="none";
+                            document.getElementById("season2").style.display="none";
+                            document.getElementById("season3").style.display="none";
+                            document.getElementById("season4").style.display="none";
+
+                        function switchSeason1(){
+                            document.getElementById("season1").style.display="initial";
+                            document.getElementById("season2").style.display="none";
+                            document.getElementById("season3").style.display="none";
+                            document.getElementById("season4").style.display="none";
+                        }
+                        function switchSeason2(){
+                            document.getElementById("season1").style.display="none";
+                            document.getElementById("season2").style.display="initial";
+                            document.getElementById("season3").style.display="none";
+                            document.getElementById("season4").style.display="none";
+                        }
+                        function switchSeason3(){
+                            document.getElementById("season1").style.display="none";
+                            document.getElementById("season2").style.display="none";
+                            document.getElementById("season3").style.display="initial";
+                            document.getElementById("season4").style.display="none";
+                        }
+                        function switchSeason4(){
+                            document.getElementById("season1").style.display="none";
+                            document.getElementById("season2").style.display="none";
+                            document.getElementById("season3").style.display="none";
+                            document.getElementById("season4").style.display="initial";
+                        }
+                    </script>
+
+                </div>
+
+                <!-- Nothing after this line ty xx -->
+            </section>    
+        </div>
+    </div>
+
+    
+</body>
+</html>

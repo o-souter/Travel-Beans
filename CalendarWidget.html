@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- Navya -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar Widget - Travel Beans</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/Calander.css">
+
+    <script src="https://kit.fontawesome.com/5ff8596a54.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #F7F7FC;">
+<!-- Page Content Below Please, Love from Adam xx -->
+
+<div id="eventView" style="background: white; border: solid 2px #1abc9c; cursor:pointer; width: 100%; height: 100%; position: fixed; display: none; justify-content: center; align-items: center;" onclick='document.querySelector(`#eventView`).style.display = "none";'>
+    <div style="width: 80%;">
+        <h1 id="eventView-Title">Event Title</h1>
+        <h4 id="eventView-Date">31/12/2020</h4>
+
+        <p id="eventView-Info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum, nunc quis aliquet maximus, augue magna dignissim mi, vel sagittis ex libero eu eros. Sed pellentesque.
+        </p>
+    </div>
+</div>
+
+<div class="month">
+    <ul>
+      <li class="prev" onclick = "prevMonth();">&#10094;</li>
+      <li class="next" onclick = "nextMonth();">&#10095;</li>
+      <li>
+        <span id="monthName">dsadsadsa</span><br>
+        <span style="font-size:18px" id="year">2020</span>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+  </ul>
+
+  <ul class="days" id="days">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+  </ul>
+
+  <script>
+      const date = new Date();
+      const month = date.getMonth();
+
+      const months = [{name:"January", days:31}, {name:"Febuary", days:28}, {name:"March", days:31}, {name:"April", days:30}, {name:"May", days:31}, {name:"June", days:30}, {name:"July", days:31}, {name:"August", days:31}, {name:"September", days:30}, {name:"October", days:31}, {name:"November", days:31}, {name:"December", days:31}];
+      
+      const events = [
+        {
+            day:30,
+            month:09,
+            year:2021,
+            title:"Final Date to Join our society",
+            info:"This date is the final date to register interest for our society!"
+        },
+        {
+            day:15,
+            month:12,
+            year:2020,
+            title:"Travelling Society Ball",
+            info:"The perfect chance to dress up and spend a good time with friends and society members and have a night to remember!"
+        },
+        {
+            day:01,
+            month:03,
+            year:2021,
+            title:"Start of Fundraising Events",
+            info:"The whole month is used for the society to fundraise enough money to allow our society to contribute to a charity when we get there "
+        },
+        {
+            day:30,
+            month:09,
+            year:2020,
+            title:"First Meeting of the Semester!",
+            info:"The first meeting will allow new members to meet old ones with games in a chilled environment!"
+        },
+        {
+            day:01,
+            month:12,
+            year:2021,
+            title:"Last Meeting of the 1st Semester!",
+            info:"The last meeting will round up the first semester and allow team members to say good bye for the semester!"
+        }
+      ];
+      
+      let currentMonth = month;
+      let currentYear = date.getFullYear();
+
+      let noOfMonths = month;
+
+      document.querySelector("#monthName").innerText = months[month].name;
+
+      //*Reset*//
+      prevMonth();
+      nextMonth();
+
+      function nextMonth()
+      {
+          noOfMonths++;
+          if(noOfMonths % 12 === 0) {
+              currentYear = parseInt(document.querySelector('#year').innerText) + 1;
+              document.querySelector('#year').innerText = currentYear;
+              
+          }
+
+
+
+          if (currentMonth === 11)
+          {
+          currentMonth = 0;
+          }else {
+              currentMonth++;
+          }
+
+
+          document.querySelector("#monthName").innerText = months[currentMonth].name;
+
+          makeDays(months[currentMonth].days);
+      }
+
+      function prevMonth()
+      {
+
+          if(noOfMonths % 12 === 0) {
+              currentYear = parseInt(document.querySelector('#year').innerText) - 1;
+              document.querySelector('#year').innerText = currentYear;
+          }
+          noOfMonths--;
+
+          if (currentMonth === 0)
+          {
+          currentMonth = 11;
+          }else {
+              currentMonth--;
+          }
+
+          document.querySelector("#monthName").innerText = months[currentMonth].name;
+
+          makeDays(months[currentMonth].days);;
+      }
+
+      function makeDays(days) {
+          document.querySelector('#days').innerHTML = "";
+          let output = "";
+          for (let i = 1; i < days + 1; i++) {
+
+              let eventOnThisDay = false;
+              let eventDetails = {};
+              events.some(event => {
+
+                if(event.year === currentYear) {
+                    if((event.month - 1) === currentMonth) {
+                        if(event.day === i) {
+                            eventOnThisDay = true;
+                            eventDetails = event;
+                            return;
+                        }
+                    }
+                }
+
+              });
+
+              eventOnThisDay ? output += `<li style="color:red; font-weight:bold;" onclick="viewEvent('${eventDetails.title}','${eventDetails.day}','${eventDetails.month}','${eventDetails.year}', '${eventDetails.info}');">${i}</li>` : output += `<li>${i}</li>`;
+          }
+
+          document.querySelector('#days').innerHTML = output;
+      }
+
+        function viewEvent(title,day,month,year,info) {
+            document.querySelector('#eventView-Title').innerText = title;
+            document.querySelector('#eventView-Date').innerText = `${day}/${month}/${year}`;
+            document.querySelector('#eventView-Info').innerText = info;
+            document.querySelector('#eventView').style.display = "flex";
+        }
+
+
+  </script>
+
+
+  <!-- Nothing after this line ty xx -->
+</section>
+</div>
+</body>
+</html>
